@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yufan's Tags Website</title>
+  </head>
+  <body>
+    <h1>Yufan Mou</h1>
+
+    <h2>About Me</h2>
+    <p>I was born in St. Paul, Minnesota.</p>
+    <p>I am currently staying in Redmond, Washington.</p>
+
+    <h2>My Favorite Sites</h2>
+    <ul>
+      <li> <a href="https://www.facebook.com/">Facebook</a> </li>
+      <li> <a href="https://www.netflix.com/browse">Netflix</a> </li>
+      <li> <a href="https://www.viki.com/">Viki</a> </li>
+    </ul>
+
+    <h2>My Favorite Pictures</h2>
+    <a href="https://www.goodhousekeeping.com/life/g27723963/beach-quotes/">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beach-quotes-1559667853.jpg" title="Pretty beach" style="width: 100px; height: 100px; margin: 5px;">
+    </a>
+    <a href="https://www.goodhousekeeping.com/life/pets/g4531/cutest-dog-breeds/">
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=640:*" title="Cute dog" style="width: 100px; height: 100px; margin: 5px;">
+    </a>
+
+    <h2>Some Random Tags</h2>
+    <label for="journalEntry">Journal Entry: How was your day today?</label>
+    <textarea id="journalEntry" name="journalEntry" rows="10" cols="50">
+      Today was a gray day, which made me feel slightly more tired than normal.
+      I was also stuck on a bug in my homework project, so that was frustrating.
+    </textarea>
+
+    <br><br><br>
+    <button onclick="showContent()">Show hidden content</button>
+
+    <template>
+      <h2>Another cute puppy!</h2>
+      <img src="https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg" width="214" height="204">
+    </template>
+
+    <script>
+    function showContent() {
+      var temp = document.getElementsByTagName("template")[0];
+      var clon = temp.content.cloneNode(true);
+      document.body.appendChild(clon);
+    }
+    </script>
+  </body>
+</html>
